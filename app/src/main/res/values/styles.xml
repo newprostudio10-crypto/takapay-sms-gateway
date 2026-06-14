@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <style name="Theme.TakaPaySMS" parent="Theme.MaterialComponents.DayNight.NoActionBar">
+        <item name="colorPrimary">#00D4AA</item>
+        <item name="colorPrimaryVariant">#00A880</item>
+        <item name="colorOnPrimary">#000000</item>
+        <item name="android:windowBackground">#0F1923</item>
+    </style>
+</resources>
