@@ -1,0 +1,212 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#0F1923">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:padding="20dp">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:gravity="center"
+            android:paddingTop="20dp"
+            android:paddingBottom="24dp">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="💳 TakaPay"
+                android:textSize="28sp"
+                android:textStyle="bold"
+                android:textColor="#00D4AA" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="SMS Forwarder"
+                android:textSize="14sp"
+                android:textColor="#8899AA"
+                android:layout_marginTop="4dp" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:background="#1A2535"
+            android:padding="16dp"
+            android:layout_marginBottom="16dp">
+
+            <TextView
+                android:id="@+id/tv_status"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="⏹ সার্ভিস বন্ধ আছে"
+                android:textColor="#FFFFFF"
+                android:textSize="15sp" />
+
+            <TextView
+                android:id="@+id/tv_count"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="মোট ফরওয়ার্ড: 0 টি"
+                android:textColor="#8899AA"
+                android:textSize="13sp"
+                android:layout_marginTop="6dp" />
+        </LinearLayout>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="সার্ভার সেটিংস"
+            android:textColor="#00D4AA"
+            android:textSize="13sp"
+            android:textAllCaps="true"
+            android:layout_marginBottom="10dp" />
+
+        <EditText
+            android:id="@+id/et_server_url"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="Server URL (https://yourdomain.com)"
+            android:textColorHint="#556677"
+            android:textColor="#FFFFFF"
+            android:background="#1A2535"
+            android:padding="14dp"
+            android:inputType="textUri"
+            android:layout_marginBottom="10dp" />
+
+        <EditText
+            android:id="@+id/et_api_key"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="API Key"
+            android:textColorHint="#556677"
+            android:textColor="#FFFFFF"
+            android:background="#1A2535"
+            android:padding="14dp"
+            android:inputType="textPassword"
+            android:layout_marginBottom="16dp" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:layout_marginBottom="20dp">
+
+            <Button
+                android:id="@+id/btn_save"
+                android:layout_width="0dp"
+                android:layout_height="48dp"
+                android:layout_weight="1"
+                android:text="💾 সেভ"
+                android:backgroundTint="#1A4A3A"
+                android:textColor="#00D4AA"
+                android:layout_marginEnd="8dp" />
+
+            <Button
+                android:id="@+id/btn_test"
+                android:layout_width="0dp"
+                android:layout_height="48dp"
+                android:layout_weight="1"
+                android:text="🔗 টেস্ট"
+                android:backgroundTint="#1A3A4A"
+                android:textColor="#00AADD" />
+        </LinearLayout>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="পেমেন্ট ফিল্টার"
+            android:textColor="#00D4AA"
+            android:textSize="13sp"
+            android:textAllCaps="true"
+            android:layout_marginBottom="10dp" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:background="#1A2535"
+            android:padding="16dp"
+            android:layout_marginBottom="16dp">
+
+            <Switch
+                android:id="@+id/sw_bkash"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="bKash"
+                android:textColor="#FFFFFF"
+                android:checked="true"
+                android:layout_marginBottom="10dp" />
+
+            <Switch
+                android:id="@+id/sw_nagad"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Nagad"
+                android:textColor="#FFFFFF"
+                android:checked="true"
+                android:layout_marginBottom="10dp" />
+
+            <Switch
+                android:id="@+id/sw_rocket"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Rocket"
+                android:textColor="#FFFFFF"
+                android:checked="true"
+                android:layout_marginBottom="10dp" />
+
+            <Switch
+                android:id="@+id/sw_upay"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Upay"
+                android:textColor="#FFFFFF"
+                android:checked="true"
+                android:layout_marginBottom="10dp" />
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:background="#2A3545"
+                android:layout_marginBottom="10dp" />
+
+            <Switch
+                android:id="@+id/sw_received_only"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="শুধু 'Received' SMS ফরওয়ার্ড করো"
+                android:textColor="#FFFFFF"
+                android:checked="true" />
+        </LinearLayout>
+
+        <Button
+            android:id="@+id/btn_start_stop"
+            android:layout_width="match_parent"
+            android:layout_height="56dp"
+            android:text="▶ সার্ভিস চালু করুন"
+            android:backgroundTint="#00D4AA"
+            android:textColor="#000000"
+            android:textSize="16sp"
+            android:textStyle="bold"
+            android:layout_marginBottom="20dp" />
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="ফোন রিস্টার্টের পরেও স্বয়ংক্রিয়ভাবে চালু হবে।"
+            android:textColor="#556677"
+            android:textSize="12sp"
+            android:gravity="center"
+            android:paddingBottom="20dp" />
+
+    </LinearLayout>
+</ScrollView>
